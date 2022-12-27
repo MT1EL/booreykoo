@@ -1,9 +1,18 @@
 import { Box, Text } from "@chakra-ui/react";
-import React from "react";
-
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function ContactButton({ mode, bottom }) {
+  useEffect(() => {
+    Aos.init({
+      startEvent: "load",
+      once: true,
+    });
+  }, []);
   return (
     <Box
+      data-aos="fade-down"
+      data-aos-delay="200"
       w="190px"
       h="54px"
       bg="transparent"

@@ -5,11 +5,10 @@ import "aos/dist/aos.css";
 
 function ContactInput({ placeholder }) {
   useEffect(() => {
-    Aos.init();
+    Aos.init({ startEvent: "load", once: true });
   }, []);
   return (
     <Input
-      data-aos="fade-up"
       border="2px solid #161616"
       px="25px"
       py="12px"

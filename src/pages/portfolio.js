@@ -19,7 +19,7 @@ function Portfolio() {
     "zoom-out-right",
   ];
   useEffect(() => {
-    Aos.init();
+    Aos.init({ startEvent: "load", once: true });
   }, []);
   return (
     <Box px="5%" bg="#fff" mx="auto" py="6em">
