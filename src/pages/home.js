@@ -12,6 +12,7 @@ function Home() {
       startEvent: "load",
       once: true,
     });
+    Aos.refresh();
   }, []);
   return (
     <Box bg="#161616" position="relative" h="100vh">

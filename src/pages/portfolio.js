@@ -20,6 +20,7 @@ function Portfolio() {
   ];
   useEffect(() => {
     Aos.init({ startEvent: "load", once: true });
+    Aos.refresh();
   }, []);
   return (
     <Box px="5%" bg="#fff" mx="auto" py="6em">

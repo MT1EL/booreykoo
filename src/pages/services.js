@@ -53,6 +53,7 @@ function Services() {
   ];
   useEffect(() => {
     Aos.init();
+    Aos.refresh();
   }, []);
   return (
     <Box bg="#fff" minH="100vh" pt="5em">
