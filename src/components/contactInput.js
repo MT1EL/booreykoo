@@ -1,9 +1,15 @@
 import { Input } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function ContactInput({ placeholder }) {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Input
+      data-aos="fade-up"
       border="2px solid #161616"
       px="25px"
       py="12px"

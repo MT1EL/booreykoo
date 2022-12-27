@@ -1,12 +1,19 @@
 import { Text, Box, Textarea, Button, Flex, Img } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import ContactInput from "../components/contactInput";
 import facebook from "../assets/facebook.png";
 import instagram from "../assets/instagramLogo.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 function Contact() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box
       h="100vh"
+      overflowY={"hidden"}
       bg="#CDC152"
       px={["1em", "1em", "131px"]}
       py="68px"
@@ -19,6 +26,7 @@ function Contact() {
         <ContactInput placeholder="Mobile*" />
         <ContactInput placeholder="Email*" />
         <Textarea
+          data-aos="fade-up"
           borderRadius="0"
           border="2px solid #161616"
           variant="unstyled"
@@ -40,6 +48,7 @@ function Contact() {
           color="#161616"
           fontWeight={"700"}
           mt="10px"
+          data-aos="fade-up"
         >
           Send
         </Button>
@@ -51,19 +60,24 @@ function Contact() {
         alignItems={"flex-end"}
         gap="2em"
       >
-        <Text fontWeight="700" textAlign="right" fontSize="48px">
+        <Text
+          fontWeight="700"
+          textAlign="right"
+          fontSize="48px "
+          data-aos="fade-up"
+        >
           Just be yourself!
         </Text>
         <Box>
-          <Text textAlign="right">
+          <Text textAlign="right" data-aos="fade-in">
             Contact us: +1 (533) 6454 45454 12/53 Towers Ave., 19726,
             California, USA
           </Text>
-          <Text textAlign="right" fontWeight="700">
+          <Text textAlign="right" fontWeight="700" data-aos="fade-in">
             info@booreykoo.com
           </Text>
         </Box>
-        <Flex gap="1em">
+        <Flex gap="1em" data-aos="fade-in">
           <Img src={facebook} alt="facebook" />
           <Img src={instagram} alt="instagram" />
         </Flex>

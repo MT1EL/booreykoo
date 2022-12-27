@@ -1,7 +1,8 @@
 import { Text, Box, Flex, Grid } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import ContactButton from "../components/contactButton";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 function Services() {
   const data = [
     {
@@ -50,9 +51,12 @@ function Services() {
         "lobortis nis. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.",
     },
   ];
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box bg="#fff" minH="100vh" pt="5em">
-      <Box color="#161616" maxW="1300px" mx="auto" px="5%">
+      <Box color="#161616" maxW="1300px" mx="auto" px="5%" data-aos="fade-up">
         <Box>
           <Text fontWeight={"700"}>Services</Text>
           <Box w="13px" bg="#333333" h="3px" my="15px" />
@@ -92,7 +96,7 @@ function Services() {
           pb="69px"
         >
           {data.map((item) => (
-            <Box key={item.title}>
+            <Box key={item.title} data-aos="fade-up">
               <Text fontSize={"22px"}>{item.title}</Text>
               <Text mt="10px">{item.content}</Text>
               <Box w="13px" bg="#fff" h="3px" my="15px" />

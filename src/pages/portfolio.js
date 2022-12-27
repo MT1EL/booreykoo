@@ -1,13 +1,26 @@
 import { Grid, Img, Box, Flex } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import image1 from "../assets/portfolio1.png";
 import image2 from "../assets/portfolio2.jpg";
 import image3 from "../assets/portfolio3.png";
 import image4 from "../assets/portfolio4.png";
 import image5 from "../assets/portfolio5.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 function Portfolio() {
   const [count, setCount] = useState(null);
   const data = [image1, image2, image3, image4, image5, image5];
+  const animation = [
+    "zoom-in-left",
+    "zoom-in-up",
+    "zoom-in-right",
+    "zoom-out-left",
+    "zoom-out-up",
+    "zoom-out-right",
+  ];
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Box px="5%" bg="#fff" mx="auto" py="6em">
       <Flex gap="0.2em" w="fit-content" mx="auto" pb="1em">
@@ -29,6 +42,7 @@ function Portfolio() {
             key={index.toString()}
             role="group"
             cursor={"pointer"}
+            data-aos={animation[index]}
           >
             <Img
               src={item}

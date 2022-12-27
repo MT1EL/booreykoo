@@ -1,11 +1,25 @@
 import { Box, Grid, GridItem, Img, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import title from "../assets/TitleBlack.png";
 import ContactButton from "../components/contactButton";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 function About() {
+  useEffect(() => {
+    Aos.init();
+    Aos.refresh();
+  }, []);
   return (
     <Box bg="#fff" position={"relative"} minH="100vh" pb="20px">
-      <Img src={title} alt="title" mx="auto" py="6.875em" maxW="90%" />
+      <Img
+        src={title}
+        alt="title"
+        mx="auto"
+        py="6.875em"
+        maxW="90%"
+        data-aos="zoom-in"
+      />
 
       <Grid
         templateColumns={["repeat(1fr)", "repeat(1fr)", "repeat(2, 1fr)"]}
@@ -14,6 +28,7 @@ function About() {
         w="90%"
         maxW={1100}
         mx="auto"
+        data-aos="zoom-in"
       >
         <GridItem colSpan={[1, 1, 2]}>
           <Text fontWeight={"700"}>About us</Text>
