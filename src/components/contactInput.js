@@ -5,7 +5,7 @@ import "aos/dist/aos.css";
 
 function ContactInput({ placeholder }) {
   useEffect(() => {
-    Aos.init({ startEvent: "load", once: true });
+    Aos.init({ startEvent: "load", once: true, disable: "mobile" });
   }, []);
   return (
     <Input

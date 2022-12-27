@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 function Contact() {
   useEffect(() => {
-    Aos.init({ startEvent: "load", once: true });
+    Aos.init({ startEvent: "load", once: true, disable: "mobile" });
     Aos.refresh();
   }, []);
   return (

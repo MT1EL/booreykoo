@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 
 function About() {
   useEffect(() => {
-    Aos.init();
+    Aos.init({ disable: "mobile" });
     Aos.refresh();
   }, []);
   return (

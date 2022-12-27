@@ -52,7 +52,7 @@ function Services() {
     },
   ];
   useEffect(() => {
-    Aos.init();
+    Aos.init({ disable: "mobile" });
     Aos.refresh();
   }, []);
   return (

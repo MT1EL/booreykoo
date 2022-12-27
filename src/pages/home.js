@@ -11,6 +11,7 @@ function Home() {
     Aos.init({
       startEvent: "load",
       once: true,
+      disable: "mobile",
     });
     Aos.refresh();
   }, []);

@@ -7,6 +7,7 @@ function ContactButton({ mode, bottom }) {
     Aos.init({
       startEvent: "load",
       once: true,
+      disable: "mobile",
     });
   }, []);
   return (
