@@ -1,5 +1,4 @@
-import { ChakraProvider, Box } from "@chakra-ui/react";
-import "./App.css";
+import { ChakraProvider } from "@chakra-ui/react";
 import About from "./pages/about";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/mainPage";
@@ -11,18 +10,16 @@ function App() {
   return (
     <ChakraProvider>
       <MainDrawer />
-      <Box overflowX="hidden" maxW="100vw">
-        <Router>
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/Home" element={<MainPage />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Services" element={<Services />} />
-            <Route path="/Portfolio" element={<Portfolio />} />
-            <Route path="/Contact" element={<Contact />} />
-          </Routes>
-        </Router>
-      </Box>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/Home" element={<MainPage />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Portfolio" element={<Portfolio />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </ChakraProvider>
   );
 }

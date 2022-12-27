@@ -11,12 +11,12 @@ function Portfolio() {
   const [count, setCount] = useState(null);
   const data = [image1, image2, image3, image4, image5, image5];
   const animation = [
-    "zoom-in-left",
     "zoom-in-up",
-    "zoom-in-right",
-    "zoom-out-left",
-    "zoom-out-up",
-    "zoom-out-right",
+    "zoom-in-up",
+    "zoom-in-up",
+    "zoom-in-up",
+    "zoom-in-up",
+    "zoom-in-up",
   ];
   useEffect(() => {
     Aos.init({ startEvent: "load", once: true });

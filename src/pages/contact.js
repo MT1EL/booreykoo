@@ -12,8 +12,8 @@ function Contact() {
   }, []);
   return (
     <Box
-      h="100vh"
-      overflowY={"hidden"}
+      // h="100vh"
+      // overflowY={"hidden"}
       bg="#CDC152"
       px={["1em", "1em", "131px"]}
       py="68px"
